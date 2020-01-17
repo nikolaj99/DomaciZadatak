@@ -7,7 +7,7 @@ namespace DomaciZadatak.Models
 {
     public class DrziBO
     {
-        public int Aktivnost { get; set; }
+        public int AktivnostID { get; set; }
         public int ZaposleniID { get; set; }
     }
 }
