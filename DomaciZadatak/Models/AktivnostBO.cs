@@ -5,13 +5,11 @@ using System.Web;
 
 namespace DomaciZadatak.Models
 {
-    public class Rezervisan_TerminBO
+    public class AktivnostBO
     {
-        public int TerminID { get; set; }
+        public int AktivnostID { get; set; }
 
-        public SalaBO Sala { get; set; }
-
-       
-
+        public string Naziv { get; set; }
+ 
     }
 }

@@ -127,6 +127,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AktivnostBO.cs" />
+    <Compile Include="Models\DrziBO.cs" />
     <Compile Include="Models\Interfaces\IKorisnikRepository.cs" />
     <Compile Include="Models\KorisnikBO.cs" />
     <Compile Include="Models\LinqSql\Korisnici.designer.cs">
@@ -137,6 +139,10 @@
     <Compile Include="Models\LinqSql\KorisnikSqlRepository.cs" />
     <Compile Include="Models\Rezervisan_TerminBO.cs" />
     <Compile Include="Models\SalaBO.cs" />
+    <Compile Include="Models\Sistemski_AdministratorBO.cs" />
+    <Compile Include="Models\TrenerBO.cs" />
+    <Compile Include="Models\UplataBO.cs" />
+    <Compile Include="Models\ZaposleniBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
