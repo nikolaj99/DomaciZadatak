@@ -8,6 +8,6 @@ namespace DomaciZadatak.Models
     public class KalendarBO
     {
         public int JMBG { get; set; }
-        public int AktivnostID { get; set; }
+        public int TerminID { get; set; }
     }
 }
