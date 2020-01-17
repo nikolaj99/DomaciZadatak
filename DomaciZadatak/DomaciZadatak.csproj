@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DomaciZadatak</RootNamespace>
     <AssemblyName>DomaciZadatak</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -25,7 +25,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,7 +54,11 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -124,11 +127,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AktivnostBO.cs" />
     <Compile Include="Models\DrziBO.cs" />
-    <Compile Include="Models\Grupna.cs" />
-    <Compile Include="Models\Individualna.cs" />
     <Compile Include="Models\Interfaces\IKorisnikRepository.cs" />
-    <Compile Include="Models\KalendarBO.cs" />
     <Compile Include="Models\KorisnikBO.cs" />
     <Compile Include="Models\LinqSql\Korisnici.designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,9 +137,12 @@
       <DependentUpon>Korisnici.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\LinqSql\KorisnikSqlRepository.cs" />
-    <Compile Include="Models\RecepcionarBO.cs" />
     <Compile Include="Models\Rezervisan_TerminBO.cs" />
     <Compile Include="Models\SalaBO.cs" />
+    <Compile Include="Models\Sistemski_AdministratorBO.cs" />
+    <Compile Include="Models\TrenerBO.cs" />
+    <Compile Include="Models\UplataBO.cs" />
+    <Compile Include="Models\ZaposleniBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

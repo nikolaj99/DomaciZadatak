@@ -5,13 +5,7 @@ using System.Web;
 
 namespace DomaciZadatak.Models
 {
-    public class Rezervisan_TerminBO
+    public class TrenerBO
     {
-        public int TerminID { get; set; }
-
-        public SalaBO Sala { get; set; }
-
-       
-
     }
 }
