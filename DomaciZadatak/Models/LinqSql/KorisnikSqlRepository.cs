@@ -11,7 +11,15 @@ namespace DomaciZadatak.Models.LinqSql
         private KorisniciDataContext kDC = new KorisniciDataContext();
         public void Dodaj(KorisnikBO korisnik)
         {
-            throw new NotImplementedException();
+            //Korisnik korisnikSql = new Korisnik();
+            //korisnikSql.JMBG = korisnik.JMBG;
+            //korisnikSql.Ime = korisnik.Ime;
+            //korisnikSql.Prezime = korisnik.Prezime;
+            //korisnikSql.DatumRodj = korisnik.DatumRodj;
+            //korisnikSql.Email = korisnik.Email;
+            //korisnikSql.Lozinka = korisnik.Lozinka;
+            //kDC.Korisniks.InsertOnSubmit(korisnikSql);
+            //kDC.SubmitChanges();
         }
 
         public KorisnikBO GetById(int korisnikid)
