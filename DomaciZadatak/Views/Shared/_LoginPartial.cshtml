@@ -2,7 +2,7 @@
 {
 
     <ul class="nav navbar-nav navbar-right">
-        <li><p>Korisnik: @Session["Email"].ToString()</p></li>
+
         @*<li>@Html.ActionLink("Lista škola", "Index", "Skola")</li>
         @{
             string admin = Session["Admin"].ToString();
@@ -12,13 +12,16 @@
                 <li>@Html.ActionLink("Korisnici", "Izlistaj", "KorisnikAdmin")</li>
             }
         }*@
+        <li>@Html.ActionLink("Uplati", "Index", "Uplata")</li>
         <li>@Html.ActionLink("Odjavi se", "Izloguj", "Login")</li>
+        <li><label class="col-md-1" style="color:white; margin-top:15px">@Session["Email"].ToString()</label></li>
     </ul>
 
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Prijava", "Index", "Login")</li>
-    </ul>
+<ul class="nav navbar-nav navbar-right">
+    <li>@Html.ActionLink("Prijava", "Index", "Login")</li>
+    <li>@Html.ActionLink("Registracija", "Index", "Register")</li>
+</ul>
 }

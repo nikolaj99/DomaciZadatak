@@ -27,7 +27,7 @@ namespace DomaciZadatak.Controllers
         public ActionResult Dodaj(KorisnikBO korisnik)
         {
             korisnikRepository.Dodaj(korisnik);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Login");
         }
     }
 }
