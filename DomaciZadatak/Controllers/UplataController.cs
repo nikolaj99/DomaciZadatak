@@ -23,5 +23,15 @@ namespace DomaciZadatak.Controllers
             ViewBag.Usluge = aktivnosti;
             return View();
         }
+
+        public ActionResult GetCena(int id)
+        {
+            string cena;
+            Aktivnost akt = new Aktivnost();
+            akt = kDC.Aktivnosts.First(x => x.AktivnostID == id);
+            cena = Convert.ToString(akt.Cena);
+            return Json(cena, JsonRequestBehavior.AllowGet);
+
+        }
     }
 }

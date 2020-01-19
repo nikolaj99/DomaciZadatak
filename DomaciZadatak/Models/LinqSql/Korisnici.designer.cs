@@ -216,6 +216,8 @@ namespace DomaciZadatak.Models.LinqSql
 		
 		private string _Naziv;
 		
+		private System.Nullable<int> _Cena;
+		
 		private EntitySet<Drzi> _Drzis;
 		
 		private EntityRef<Grupna> _Grupna;
@@ -232,6 +234,8 @@ namespace DomaciZadatak.Models.LinqSql
     partial void OnAktivnostIDChanged();
     partial void OnNazivChanging(string value);
     partial void OnNazivChanged();
+    partial void OnCenaChanging(System.Nullable<int> value);
+    partial void OnCenaChanged();
     #endregion
 		
 		public Aktivnost()
@@ -279,6 +283,26 @@ namespace DomaciZadatak.Models.LinqSql
 					this._Naziv = value;
 					this.SendPropertyChanged("Naziv");
 					this.OnNazivChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cena", DbType="Int")]
+		public System.Nullable<int> Cena
+		{
+			get
+			{
+				return this._Cena;
+			}
+			set
+			{
+				if ((this._Cena != value))
+				{
+					this.OnCenaChanging(value);
+					this.SendPropertyChanging();
+					this._Cena = value;
+					this.SendPropertyChanged("Cena");
+					this.OnCenaChanged();
 				}
 			}
 		}

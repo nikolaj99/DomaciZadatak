@@ -4,6 +4,7 @@
     <Type Name="Aktivnost">
       <Column Name="AktivnostID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Naziv" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cena" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Aktivnost_Drzi" Member="Drzis" ThisKey="AktivnostID" OtherKey="AktivnostID" Type="Drzi" />
       <Association Name="Aktivnost_Grupna" Member="Grupna" ThisKey="AktivnostID" OtherKey="AktivnostID" Type="Grupna" Cardinality="One" />
       <Association Name="Aktivnost_Individualna" Member="Individualna" ThisKey="AktivnostID" OtherKey="AktivnostID" Type="Individualna" Cardinality="One" />

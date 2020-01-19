@@ -17,14 +17,14 @@
         <div class="form-group">
            <label class="control-label col-md-2">Usluge</label>
             <div class="col-md-10">
-                @Html.DropDownList("Aktivnosti", new SelectList(ViewBag.Usluge, "AktivnostID", "Naziv"), htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("Aktivnosti", new SelectList(ViewBag.Usluge, "AktivnostID", "Naziv"), htmlAttributes: new { @class = "form-control", onchange="OnAktivnostChanged(this.value)"})
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Cene, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Cene, new { htmlAttributes = new { @class = "form-control" } })
+                <input class="form-control" type="text" id="Cenaaktivnosti" />
                 @Html.ValidationMessageFor(model => model.Cene, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -37,7 +37,16 @@
     </div>
 }
 
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+<script>
+    function OnAktivnostChanged(aktivnostid) {   // POVEZIVANJE ACTIONRESULT i javaskript funkcije, ActionResult vraca podatke o ceni return Json
+        $.ajax({
+            type: "Get",
+            url: '@Url.Action("GetCena","Uplata")',
+            data: { id: aktivnostid },
+            dataType: "json",
+            success: function (data) {
+                $("#Cenaaktivnosti").val(data);
+            }
+            });
+    }
+</script>
